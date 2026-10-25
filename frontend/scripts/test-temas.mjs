@@ -236,6 +236,11 @@ const AURORA_PALETAS = [
   ["bioluminiscencia", "oscuro", "[data-theme='bioluminiscencia'][data-dark='true']"],
   ["cantarela", "claro", "[data-theme='cantarela']"],
   ["cantarela", "oscuro", "[data-theme='cantarela'][data-dark='true']"],
+  // Amethystina (`FUN-M-55`) y Amanita (`FUN-M-56`).
+  ["amethystina", "claro", "[data-theme='amethystina']"],
+  ["amethystina", "oscuro", "[data-theme='amethystina'][data-dark='true']"],
+  ["amanita", "claro", "[data-theme='amanita']"],
+  ["amanita", "oscuro", "[data-theme='amanita'][data-dark='true']"],
 ];
 
 /** Las declaraciones `--x: valor;` de un cuerpo de bloque. */

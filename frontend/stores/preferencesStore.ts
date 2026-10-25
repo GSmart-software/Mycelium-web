@@ -38,7 +38,10 @@ export const PREVIEW_FONTS: FontOption[] = [
 const FUENTE_DEFECTO = "var(--font-geist-sans), sans-serif";
 const TAMANO_FUENTE_DEFECTO = 14;
 
-export type Tema = "bioluminiscencia" | "cantarela";
+export type Tema = "bioluminiscencia" | "cantarela" | "amethystina" | "amanita";
+
+/** Los temas que existen (`FUN-M-55` y `FUN-M-56` sumaron Amethystina y Amanita). */
+const TEMAS_VALIDOS: readonly Tema[] = ["bioluminiscencia", "cantarela", "amethystina", "amanita"];
 
 /**
  * Ancho de tabulación (`FUN-S-02`). Se escribe libre en vez de elegirse entre unos
@@ -268,7 +271,7 @@ export const usePreferencesStore = create<PreferencesState>((set, get) => ({
     if (!user) return;
     const raw = (user.preferencias ?? {}) as Partial<Preferencias>;
     const prefs: Preferencias = { ...DEFAULT_PREFS, ...raw };
-    const tema: Tema = user.tema === "cantarela" ? "cantarela" : "bioluminiscencia";
+    const tema: Tema = TEMAS_VALIDOS.includes(user.tema as Tema) ? (user.tema as Tema) : "bioluminiscencia";
     set({ tema, modoOscuro: user.modoOscuro, prefs });
     applyToDom({ tema, modoOscuro: user.modoOscuro, prefs });
   },

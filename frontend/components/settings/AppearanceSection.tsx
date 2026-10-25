@@ -9,6 +9,9 @@ import styles from "./Settings.module.css";
 const TEMAS: { value: Tema; nombre: string; canvas: string; mist: string; glow: string; accent: string }[] = [
   { value: "bioluminiscencia", nombre: "Bioluminiscencia", canvas: "#071219", mist: "#0a1a24", glow: "#3DFFC4", accent: "#19E6FF" },
   { value: "cantarela", nombre: "Cantarela", canvas: "#1b1305", mist: "#241a08", glow: "#FFC247", accent: "#C77F2E" },
+  // Amethystina (`FUN-M-55`) y Amanita (`FUN-M-56`), reflejados de desktop el 2026-10-24.
+  { value: "amethystina", nombre: "Amethystina", canvas: "#120c1c", mist: "#1a1228", glow: "#dcb6ff", accent: "#b78cff" },
+  { value: "amanita", nombre: "Amanita", canvas: "#1a0c0b", mist: "#241211", glow: "#ffb59c", accent: "#ff6656" },
 ];
 
 /**
