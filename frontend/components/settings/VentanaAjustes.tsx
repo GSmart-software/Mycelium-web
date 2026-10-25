@@ -67,7 +67,7 @@ const CATEGORIAS: Categoria[] = [
     descripcion: "Los colores de Mycelium: el tema, el modo y la atmósfera de cada modo.",
     grupo: "Aspecto",
     ajustes: [
-      { rotulo: "Tema", alias: ["colores", "bioluminiscencia", "cantarela", "paleta"] },
+      { rotulo: "Tema", alias: ["colores", "bioluminiscencia", "cantarela", "amethystina", "amanita", "violeta", "rojo", "paleta"] },
       { rotulo: "Modo oscuro", alias: ["modo claro", "oscuro", "claro", "noche"] },
       { rotulo: "Atmósfera en modo oscuro", alias: ["abisal", "niebla", "bosque", "papel", "aurora", "fondo", "degradado"] },
       { rotulo: "Atmósfera en modo claro", alias: ["abisal", "niebla", "bosque", "papel", "aurora", "fondo", "degradado"] },

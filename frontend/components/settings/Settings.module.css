@@ -116,17 +116,17 @@
    una fila de 460px: se repartían el ancho según cuántas había y la del nombre
    largo se estiraba.
 
-   Si no entran en el ancho del bloque, la fila se desplaza en horizontal (con
-   la barra fina de globals.css) en vez de achicarlas o bajarlas de fila: una
-   sola fila mantiene el alto de la sección fijo y las muestras en el orden en
-   que se leen. El relleno de 6px deja lugar al anillo de foco (2px a 2px de
-   distancia) y al borde de la elegida, que si no el `overflow` recortaría. */
+   Si no entran en el ancho del bloque, bajan a la fila siguiente, sin achicarse:
+   el usuario quiere verlas todas a la vez, sin barra de desplazamiento
+   (2026-10-24, reflejado de desktop). Con los cuatro temas entran en una fila.
+   El relleno de 6px deja lugar al anillo de foco (2px a 2px de distancia) y al
+   borde de la elegida. */
 .swatchGroup {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.6rem;
   padding: 6px;
   margin: -6px;
-  overflow-x: auto;
 }
 
 /* Solo las de tema: `.swatch` es también la tarjeta de las atmósferas, que

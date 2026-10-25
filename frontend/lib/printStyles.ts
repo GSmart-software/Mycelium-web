@@ -1,5 +1,7 @@
 /**
- * CSS autocontenido para el PDF (HU-10). Incluye los tokens de los dos temas y
+ * CSS autocontenido para el PDF (HU-10). Incluye los tokens de los cuatro temas
+ * (Amethystina, `FUN-M-55`, y Amanita, `FUN-M-56`, con los mismos raw que
+ * styles/tokens.css) y
  * el modo oscuro + un subconjunto de estilos del preview con reglas de salto de
  * página (CA5). KaTeX y highlight.js se cargan por CDN desde el backend.
  */
@@ -23,6 +25,26 @@ export const PRINT_CSS = `
   --mic-raw-base: #130d02; --mic-raw-base-deep: #2c200a; --mic-raw-accent: #c77f2e;
   --mic-raw-glow: #ffc247; --mic-raw-canvas: #1b1305; --mic-raw-mist: #241a08;
   --mic-raw-ink: #f6e8c8; --mic-raw-ink-muted: #ac9468;
+}
+[data-theme='amethystina'] {
+  --mic-raw-base: #35195F; --mic-raw-base-deep: #2A1349; --mic-raw-accent: #6C3DBD;
+  --mic-raw-glow: #9860E8; --mic-raw-mist: #EFE6F9; --mic-raw-canvas: #F7F3FC;
+  --mic-raw-ink: #251E30; --mic-raw-ink-muted: #62577A; --mic-amber-icon: #C9821E;
+}
+[data-theme='amethystina'][data-dark='true'] {
+  --mic-raw-base: #0a0611; --mic-raw-base-deep: #1d1430; --mic-raw-accent: #b78cff;
+  --mic-raw-glow: #dcb6ff; --mic-raw-canvas: #120c1c; --mic-raw-mist: #1a1228;
+  --mic-raw-ink: #e8def5; --mic-raw-ink-muted: #9d8db4;
+}
+[data-theme='amanita'] {
+  --mic-raw-base: #561010; --mic-raw-base-deep: #4A0D0D; --mic-raw-accent: #B81F2D;
+  --mic-raw-glow: #D0602A; --mic-raw-mist: #F8E9E4; --mic-raw-canvas: #FCF6F3;
+  --mic-raw-ink: #2E2120; --mic-raw-ink-muted: #6F5652; --mic-amber-icon: #C9821E;
+}
+[data-theme='amanita'][data-dark='true'] {
+  --mic-raw-base: #0f0606; --mic-raw-base-deep: #2a1212; --mic-raw-accent: #ff6656;
+  --mic-raw-glow: #ffb59c; --mic-raw-canvas: #1a0c0b; --mic-raw-mist: #241211;
+  --mic-raw-ink: #f5e1dc; --mic-raw-ink-muted: #b38c86;
 }
 :root {
   --mic-bg-canvas: var(--mic-raw-canvas); --mic-bg-surface: var(--mic-raw-mist);

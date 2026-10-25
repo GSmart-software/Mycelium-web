@@ -29,7 +29,7 @@ public static class PreferencesEndpoints
             var userId = GetUserId(principal);
             if (userId is null) return Results.Unauthorized();
 
-            var tema = request.Tema is "bioluminiscencia" or "cantarela"
+            var tema = request.Tema is "bioluminiscencia" or "cantarela" or "amethystina" or "amanita"
                 ? request.Tema
                 : "bioluminiscencia";
             var prefsJson = request.Preferencias.ValueKind == JsonValueKind.Undefined

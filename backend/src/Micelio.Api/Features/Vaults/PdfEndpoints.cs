@@ -36,7 +36,7 @@ public static class PdfEndpoints
                 return Results.Json(new { error = "Sin acceso." }, statusCode: 403);
             }
 
-            var tema = request.Tema == "cantarela" ? "cantarela" : "bioluminiscencia";
+            var tema = request.Tema is "cantarela" or "amethystina" or "amanita" ? request.Tema : "bioluminiscencia";
             var html = BuildDocument(tema, request.ModoOscuro, request.Html ?? "", request.Css ?? "");
 
             try
